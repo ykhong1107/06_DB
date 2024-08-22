@@ -954,7 +954,6 @@ WHERE DEPT_CODE =
 		FROM EMPLOYEE
 		WHERE EMP_NAME = '전지연')
 AND EMP_NAME != '전지연';
-	 
 --SELECT
 --	EMP_ID,
 --	EMP_NAME,
