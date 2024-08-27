@@ -20,7 +20,7 @@
  *  CREATE [OR REPLACE] [FORCE | NOFORCE] VIEW 뷰이름 [컬럼 별칭]
  *  AS 서브쿼리(SELECT문)
  *  [WITH CHECK OPTION]
- *  [WITH READ OLNY];
+ *  [WITH READ ONLY];
  * 
  * 
  *  1) OR REPLACE 옵션 : 

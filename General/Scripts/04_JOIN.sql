@@ -608,7 +608,23 @@ AND
 ROLLBACK;
 SELECT * FROM TB_USER;
 
-		
+----------------------------------------------------------------
+
+-- practice
+
+SELECT 
+	EMP_ID 사번, 
+	EMP_NAME 이름,
+	DECODE(SUBSTR(EMP_NO, 8, 1), '1', 'M', '2', 'F') AS 성별,
+	SALARY 급여,
+	JOB_NAME 직급명,
+	NVL(DEPT_TITLE, '없음') DEPT_TITLE
+FROM EMPLOYEE
+JOIN DEPARTMENT ON(DEPT_ID = DEPT_CODE)
+JOIN JOB USING(JOB_CODE)
+WHERE DECODE(SUBSTR(EMP_NO, 8, 1), '1', 'M', '2', 'F') = 'F'
+AND SALARY BETWEEN 3000000 AND 4000000 
+ORDER BY SALARY DESC;
 	
 
 
