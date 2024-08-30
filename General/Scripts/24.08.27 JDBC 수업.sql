@@ -83,6 +83,28 @@ SELECT COUNT(*)
 FROM TB_USER
 WHERE USER_ID = 'user01';
 
+-- 업데이트
+UPDATE TB_USER
+SET USER_NAME = '개마고원', USER_PW = 'user05';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
