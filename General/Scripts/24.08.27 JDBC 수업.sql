@@ -87,16 +87,13 @@ WHERE USER_ID = 'user01';
 UPDATE TB_USER
 SET USER_NAME = '개마고원', USER_PW = 'user05';
 
+INSERT INTO TB_USER 
+VALUES(SEQ_USER_NO.NEXTVAL, 'user28', '*콩순이순이*', '콩순이', DEFAULT );
 
-
-
-
-
-
-
-
-
-
+SELECT USER_NAME
+FROM TB_USER
+WHERE USER_PW LIKE '%*%';
+COMMIT;
 
 
 
