@@ -27,3 +27,4 @@ SELECT * FROM TB_TODO;
 
 COMMIT;
 
+SELECT * FROM tb_user;
