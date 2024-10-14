@@ -679,6 +679,49 @@ CONNECT BY PRIOR COMMENT_NO = PARENT_COMMENT_NO
 ORDER SIBLINGS BY COMMENT_NO
 ;
 
+	  INSERT INTO "COMMENT"
+  	  VALUES(SEQ_COMMENT_NO.NEXTVAL, '후손 댓글 1-1-2',
+	    DEFAULT,  DEFAULT, 2,  2031, 3007);
+
+
+INSERT INTO "BOARD_TYPE"
+VALUES(4, '테스트');
+
+SELECT * FROM "BOARD_TYPE";
+
+COMMIT;
+
+
+
+------------------------------------------------------------
+
+/* 검색 조건이 일치하는 게시글 수 조회*/
+
+SELECT COUNT(*)
+FROM "BOARD"
+--JOIN "MEMBER" USING("MEMBER_NO") -- 작성자 검색
+
+WHERE BOARD_CODE = 1
+AND BOARD_DEL_FL = 'N'
+
+-- 제목 검색인 경우
+--AND BOARD_TITLE LIKE '%' || '11' || '%'
+
+-- 내용 검색인 경우
+--AND BOARD_CONTENT LIKE '%' || '11' || '%'
+
+-- 제목 또는 내용검색
+AND (BOARD_TITLE LIKE '%' || '11' || '%'
+		OR  BOARD_CONTENT LIKE '%' || '11' || '%')
+
+-- 작성자 검색
+AND MEMBER_NICKNAME LIKE '%' || '11' || '%'
+
+
+
+
+
+
 
 
 
