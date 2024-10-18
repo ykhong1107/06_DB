@@ -817,6 +817,46 @@ SELECT * FROM NOTIFICATION;
       WHERE RECEIVE_MEMBER_NO = 2
       ORDER BY NOTIFICATION_NO DESC;
 
+SELECT * FROM "NOTIFICATION"
+WHERE RECEIVE_MEMBER_NO = 2;
+
+
+-- DB에 기록된 모든 파일명 조회 --
+-- 회원 프로필이미지 + 게시글 이미지 파일명만 모두 조회
+--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+-- SUBSTRING(컬럼명, 시작 인덱스) : 인덱스부터 끝까지 잘라서 반환
+-- INSTR(컬럼명, '찾을문자열', 검색순서) : 일치하는 문자열 인덱스 반환
+-- *검색순서 -1 == 뒤에서부터 검색
+SELECT 
+	SUBSTR(PROFILE_IMG,
+				INSTR(PROFILE_IMG, '/', -1) + 1
+				) AS "FILE_NAME"
+FROM  "MEMBER"
+WHERE PROFILE_IMG IS NOT NULL
+
+UNION
+
+SELECT TO_CHAR(IMG_RENAME) "FILE_NAME"
+FROM "BOARD_IMG";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
