@@ -1,0 +1,27 @@
+SELECT * FROM BOARD;
+
+	
+
+	--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+	INSERT INTO "BOARD"
+		VALUES(
+		  SEQ_BOARD_NO.NEXTVAL,
+			'김밥일번가',
+			'제육소고기',
+			DEFAULT, 
+			'BOARD_IMG', 
+			DEFAULT,
+			1
+		);
+
+	SELECT SEQ_BOARD_NO.NEXTVAL
+	FROM DUAL;
+	
+SELECT * 
+FROM "COMMENT"
+JOIN "MEMBER" USING (MEMBER_NO);
+;
+
+INSERT INTO "COMMENT"
+VALUES(SEQ_COMMENT_NO.NEXTVAL, '1234', DEFAULT, NULL, 'N', 1, 86, NULL);
+
