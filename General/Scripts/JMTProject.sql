@@ -1,6 +1,9 @@
 SELECT * FROM BOARD;
 
+SELECT * FROM REPORT_TYPE;
 	
+SELECT *
+FROM "MEMBER"; -- 8~10 댓글!
 
 	--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 	INSERT INTO "BOARD"
